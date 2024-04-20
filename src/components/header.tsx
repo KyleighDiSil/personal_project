@@ -6,7 +6,8 @@ const Container = styled.div`
   width: 100vw;
   height: fit-content;
   overflow: hidden;
-  background-color: #a4bab7;
+  //was #a4bab7
+  background-color: #af4fe7;
   padding: 10px 5px;
   display: flex;
   justify-content: space-between;
@@ -23,7 +24,8 @@ const Container = styled.div`
   }
 
   a {
-    color: #080f0f;
+    //was #080f0f
+    color: white;
     text-align: center;
     font-size: 18px;
     border-radius: 4px;
@@ -70,7 +72,7 @@ const Logo = styled.div`
   font-size: 20px;
   padding: 15px 20px;
   text-align: center;
-  color: #080f0f;
+  color: white;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 `;
 
@@ -80,16 +82,16 @@ const Header = () => {
       <Logo>LogoHere</Logo>
       <ul>
         <li>
-          <a href="#home">Home</a>
+          <a href="/">Home</a>
         </li>
         <li>
-          <a href="#news">News</a>
+          <a href="resources">Resources</a>
         </li>
         <li>
-          <a href="#contact">Contact</a>
+          <a href="contact">Contact</a>
         </li>
         <li>
-          <a href="#about">About</a>
+          <a href="about">About</a>
         </li>
       </ul>
     </Container>
