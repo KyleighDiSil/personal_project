@@ -6,16 +6,16 @@ const Container = styled.div`
   width: 100vw;
   height: fit-content;
   overflow: hidden;
-  //was #a4bab7
-  background-color: #af4fe7;
+  background-color: #a4bab7;
   padding: 10px 5px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 
   ul {
     display: flex;
     list-style: none;
     width: fit-content;
+    padding-inline-start: 0;
     margin: 0px;
   }
 
@@ -24,8 +24,7 @@ const Container = styled.div`
   }
 
   a {
-    //was #080f0f
-    color: white;
+    color: #080f0f;
     text-align: center;
     font-size: 18px;
     border-radius: 4px;
@@ -68,27 +67,15 @@ const Container = styled.div`
   }
 `;
 
-const Logo = styled.div`
-  font-size: 20px;
-  padding: 15px 20px;
-  text-align: center;
-  color: white;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-`;
-
 const Header = () => {
   return (
     <Container>
-      <Logo>LogoHere</Logo>
       <ul>
         <li>
           <a href="/">Home</a>
         </li>
         <li>
           <a href="resources">Resources</a>
-        </li>
-        <li>
-          <a href="contact">Contact</a>
         </li>
         <li>
           <a href="about">About</a>
