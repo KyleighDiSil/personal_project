@@ -7,7 +7,7 @@ const Container = styled.div`
   height: fit-content;
   overflow: hidden;
   background-color: #a4bab7;
-  padding: 10px 5px;
+  padding-block: 10px;
   display: flex;
   justify-content: center;
 

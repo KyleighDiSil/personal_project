@@ -13,23 +13,26 @@ const Container = styled.div`
   width: fit-content;
   height: 300px;
   overflow-y: auto;
-  border: 2px solid black;
   margin: 0 auto;
+  border: 1px solid #ddd;
+  table {
+    height: 300px;
+  }
 
   th {
     background-color: aliceblue;
+    position: sticky;
+    top: 0;
   }
 
   table,
   td,
   th {
-    border: 1px solid #ddd;
     text-align: left;
   }
 
   table {
     border-collapse: collapse;
-
     width: 100%;
   }
 
@@ -117,7 +120,7 @@ const BaseTable = () => {
             </tr>
           ))}
         </tbody>
-        <tfoot>
+        {/* <tfoot>
           {table.getFooterGroups().map((footerGroup) => {
             return (
               <tr key={footerGroup.id}>
@@ -132,7 +135,7 @@ const BaseTable = () => {
               </tr>
             );
           })}
-        </tfoot>
+        </tfoot> */}
       </table>
     </Container>
   );
