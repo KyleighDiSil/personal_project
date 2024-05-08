@@ -20,7 +20,7 @@ const Container = styled.div`
   }
 
   th {
-    background-color: aliceblue;
+    background-color: #892cdc;
     position: sticky;
     top: 0;
   }

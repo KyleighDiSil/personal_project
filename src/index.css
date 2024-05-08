@@ -1,3 +1,14 @@
 body {
   margin: 0px;
+  height: 100vh;
+  background-color: #000000;
+  color: white;
 }
+
+/* ThemeDark: https://colorhunt.co/palette/00000052057b892cdcbc6ff1  */
+/*
+ThemeLight: 
+overall background: white, 
+header: #a4bab7,
+text: #080f0f
+*/

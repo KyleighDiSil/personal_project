@@ -3,24 +3,32 @@ import Form from "../components/form";
 import styled from "styled-components";
 
 const Container = styled.div`
-width: 100px;
-height: 400px;
-padding: 10px;
-border: 1px solid grey;
-border-radius: 10px;
-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-transition: 0.3s;
-width: 25%;
+  width: 100px;
+  height: 400px;
+  padding: 10px;
+  border: 1px solid #892cdc;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  &:hover {
+    box-shadow: 0 4px 8px 0 #892cdc;
+    cursor: pointer;
+  }
+  transition: 0.3s;
+  width: 33%;
+  @media (max-width: 768px) {
+    width: 75%;
+  }
 `;
 
-const Card = (args: {
-    ProjectTitle: string
-    project: React.ReactNode
-}) => {
-  return <Container>
-    <div>{args.project}</div>
-    <h1>{args.ProjectTitle}</h1>
-  </Container>;
+const Card = (args: { ProjectTitle: string; project: React.ReactNode }) => {
+  return (
+    <Container>
+      <div>{args.project}</div>
+      <h1>{args.ProjectTitle}</h1>
+    </Container>
+  );
 };
 
 export default Card;
