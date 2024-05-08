@@ -46,6 +46,7 @@ const About = () => {
   return (
     <Container>
       <h1>Kyleigh DiSilvestro</h1>
+      {/* <div><a src="linkedin.com/in/kyleigh-disilvestro-8aa044191">LinkedIn</a></div> */}
       <div>
         <img
           src="http://www.publicdomainpictures.net/pictures/170000/velka/dog-1463218026uIC.jpg"
