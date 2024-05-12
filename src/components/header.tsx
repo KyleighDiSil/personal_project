@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+const { BASE_URL } = import.meta.env;
 
 const Container = styled.div`
   position: absolute;
@@ -72,13 +73,13 @@ const Header = () => {
     <Container>
       <ul>
         <li>
-          <a href="/">Home</a>
+          <a href={BASE_URL}>Home</a>
         </li>
         <li>
-          <a href="resources">Resources</a>
+          <a href={BASE_URL + "resources"}>Resources</a>
         </li>
         <li>
-          <a href="about">About</a>
+          <a href={BASE_URL + "about"}>About</a>
         </li>
       </ul>
     </Container>
