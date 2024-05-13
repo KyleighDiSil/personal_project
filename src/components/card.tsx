@@ -25,8 +25,8 @@ const Container = styled.div`
 const Card = (args: { ProjectTitle: string; project: React.ReactNode }) => {
   return (
     <Container>
-      <div>{args.project}</div>
       <h1>{args.ProjectTitle}</h1>
+      {args.project}
     </Container>
   );
 };
