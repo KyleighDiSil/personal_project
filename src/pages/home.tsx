@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Card from "../components/card";
 
-const Container = styled.div`
+const ProjectContainer = styled.div`
   width: 100vw;
   height: fit-content;
   display: flex;
@@ -26,32 +26,39 @@ const Container = styled.div`
   }
 `;
 
+const Container = styled.div`
+  display: flexbox;
+  text-align: center;
+`;
 const Home = () => {
   return (
     <Container>
-      <Card
-        ProjectTitle="NBI Systems"
-        project={
-          <div className="thumbnail">
-            <iframe
-              src="https://kyleighdisil.github.io/NBI-Website/"
-              title="NBI Systems Preview"
+      <h1>My Projects</h1>
+      <ProjectContainer>
+        <Card
+          ProjectTitle="NBI Systems"
+          project={
+            <div className="thumbnail">
+              <iframe
+                src="https://kyleighdisil.github.io/NBI-Website/"
+                title="NBI Systems Preview"
+              />
+            </div>
+          }
+        />
+        <Card
+          ProjectTitle="Wordle"
+          project={
+            <img
+              src="/src/assets/wordle-demo.gif"
+              alt="Wordle Gif"
+              width="100%"
             />
-          </div>
-        }
-      />
-      <Card
-        ProjectTitle="Wordle"
-        project={
-          <img
-            src="/src/assets/wordle-demo.gif"
-            alt="Wordle Gif"
-            width="100%"
-          />
-        }
-      />
-      {/* <Card ProjectTitle="NBI Systems" project={<div>Here is the stuff</div>} />
+          }
+        />
+        {/* <Card ProjectTitle="NBI Systems" project={<div>Here is the stuff</div>} />
       <Card ProjectTitle="NBI Systems" project={<div>Here is the stuff</div>} /> */}
+      </ProjectContainer>
     </Container>
   );
 };

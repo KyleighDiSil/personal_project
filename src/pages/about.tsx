@@ -1,17 +1,18 @@
 import React from "react";
 import Form from "../components/form";
 import styled from "styled-components";
+import Card from "../components/card";
 
 const Container = styled.div`
   display: flex;
-  width: 100%;
-  height: fit-content;
+  width: 100vw;
+  height: 100vh;
   align-items: center;
   flex-direction: column;
 
   div {
     display: flex;
-    height: fit-content;
+
     div {
       p {
         text-indent: 20px;
@@ -21,11 +22,6 @@ const Container = styled.div`
       flex-direction: column;
     }
   }
-  img {
-    width: 100%;
-    height: 100%;
-    min-width: 200px;
-  }
 
   @media (max-width: 1007px) {
     div {
@@ -33,26 +29,29 @@ const Container = styled.div`
       align-items: center;
       flex-direction: column;
     }
-    image {
-      //this isn't getting applied consider image container
-      width: 50%;
-      height: 50%;
-      margin: unset;
-    }
   }
 `;
 
+const ImageContainer = styled.div`
+  width: 300px;
+  height: 400px;
+  min-width: 300px;
+  min-height: 400px;
+  margin-inline: 10px;
+  img {
+    height: 100%;
+    width: 100%;
+  }
+`;
 const About = () => {
   return (
     <Container>
       <h1>Kyleigh DiSilvestro</h1>
       {/* <div><a src="linkedin.com/in/kyleigh-disilvestro-8aa044191">LinkedIn</a></div> */}
       <div>
-        <img
-          src="http://www.publicdomainpictures.net/pictures/170000/velka/dog-1463218026uIC.jpg"
-          alt="Picture of Kyleigh"
-        />
-
+        <ImageContainer>
+          <img src="src/assets/kyleigh.jpg" alt="Picture of Kyleigh" />
+        </ImageContainer>
         <div>
           <p>
             Hey Everyone! Welcome to my portfolio. My goals with this project is
