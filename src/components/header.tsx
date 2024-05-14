@@ -7,7 +7,7 @@ const Container = styled.div`
   width: 100vw;
   height: fit-content;
   overflow: hidden;
-  background-color: #52057b;
+  background-color: #a4bab7;
   padding-block: 10px;
   display: flex;
   justify-content: center;
@@ -25,7 +25,7 @@ const Container = styled.div`
   }
 
   a {
-    color: white;
+    color: #080f0f;
     text-align: center;
     font-size: 18px;
     border-radius: 4px;
@@ -41,7 +41,7 @@ const Container = styled.div`
 
   .header a.active {
     background-color: dodgerblue;
-    color: white;
+    color: #080f0f;
   }
 
   a:after {
@@ -52,7 +52,7 @@ const Container = styled.div`
     height: 2px;
     left: 50%;
     position: absolute;
-    background: white;
+    background: #080f0f;
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
   }
@@ -63,8 +63,8 @@ const Container = styled.div`
   }
 
   a:hover {
-    background-color: #892cdc;
-    color: white;
+    background-color: white;
+    color: #080f0f;
   }
 `;
 

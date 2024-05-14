@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import BaseTable from "../components/base-table";
 
 const Container = styled.div`
   width: 100vw;
@@ -13,7 +14,12 @@ const Container = styled.div`
 `;
 
 const Wordle = () => {
-  return <Container>Wordle project goes here</Container>;
+  return (
+    <Container>
+      <Container>Playing With React</Container>
+      <BaseTable />
+    </Container>
+  );
 };
 
 export default Wordle;

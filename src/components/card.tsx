@@ -6,13 +6,14 @@ const Container = styled.div`
   width: 100px;
   height: 400px;
   padding: 10px;
-  border: 1px solid #892cdc;
-  border-radius: 10px;
+  background-color: whitesmoke;
+  border: 1px solid lightgray;
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   &:hover {
-    box-shadow: 0 4px 8px 0 #892cdc;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     cursor: pointer;
   }
   transition: 0.3s;
