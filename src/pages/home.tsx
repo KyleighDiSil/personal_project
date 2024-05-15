@@ -49,11 +49,7 @@ const Home = () => {
         <Card
           ProjectTitle="Wordle"
           project={
-            <img
-              src="/src/assets/wordle-demo.gif"
-              alt="Wordle Gif"
-              width="100%"
-            />
+            <img src="assets/wordle-demo.gif" alt="Wordle Gif" width="100%" />
           }
         />
         {/* <Card ProjectTitle="NBI Systems" project={<div>Here is the stuff</div>} />

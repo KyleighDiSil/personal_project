@@ -50,7 +50,7 @@ const About = () => {
       {/* <div><a src="linkedin.com/in/kyleigh-disilvestro-8aa044191">LinkedIn</a></div> */}
       <div>
         <ImageContainer>
-          <img src="src/assets/kyleigh.jpg" alt="Picture of Kyleigh" />
+          <img src="assets/kyleigh.jpg" alt="Picture of Kyleigh" />
         </ImageContainer>
         <div>
           <p>
