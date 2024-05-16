@@ -8,7 +8,7 @@ const ProjectContainer = styled.div`
   flex-flow: row wrap;
   justify-content: center;
 
-  > div {
+  .card__face--front {
     margin: 10px;
     align-items: center;
     .thumbnail iframe {
@@ -18,7 +18,8 @@ const ProjectContainer = styled.div`
 
     .thumbnail {
       width: 350px;
-      zoom: 1;
+      height: 200px;
+      zoom: 0.9;
       transform: scale(0.25);
       transform-origin: 0 0;
       pointer-events: none;
@@ -37,6 +38,9 @@ const Home = () => {
       <ProjectContainer>
         <Card
           ProjectTitle="NBI Systems"
+          description="A startup from Clarkson University reached out for some help building their website my senior year of college."
+          gitLink="https://github.com/KyleighDiSil/NBI-Website"
+          siteLink="https://kyleighdisil.github.io/NBI-Website/"
           project={
             <div className="thumbnail">
               <iframe
@@ -48,12 +52,12 @@ const Home = () => {
         />
         <Card
           ProjectTitle="Wordle"
+          gitLink="https://github.com/KyleighDiSil/project-wordle"
+          description="A different version of Wordle that is more user friendly to those with screen readers. Acknolegement to Joy of React Course."
           project={
-            <img src="assets/wordle-demo.gif" alt="Wordle Gif" width="100%" />
+            <img src="assets/wordle-demo.gif" alt="Wordle Gif" width="95%" />
           }
         />
-        {/* <Card ProjectTitle="NBI Systems" project={<div>Here is the stuff</div>} />
-      <Card ProjectTitle="NBI Systems" project={<div>Here is the stuff</div>} /> */}
       </ProjectContainer>
     </Container>
   );
