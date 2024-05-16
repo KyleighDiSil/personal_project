@@ -44,7 +44,6 @@ const Container = styled.div<{ isFlipped: boolean }>`
     backface-visibility: hidden;
     overflow: hidden;
     border-radius: 16px;
-    /* box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2); */
   }
 
   .card__face--front {

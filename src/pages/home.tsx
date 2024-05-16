@@ -9,7 +9,6 @@ const ProjectContainer = styled.div`
   justify-content: center;
 
   .card__face--front {
-    margin: 10px;
     align-items: center;
     .thumbnail iframe {
       width: 1440px;
@@ -28,6 +27,8 @@ const ProjectContainer = styled.div`
 `;
 
 const Container = styled.div`
+  width: 90%;
+  margin: 0 auto;
   display: flexbox;
   text-align: center;
 `;
