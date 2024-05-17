@@ -27,7 +27,7 @@ const ProjectContainer = styled.div`
 `;
 
 const Container = styled.div`
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   display: flexbox;
   text-align: center;
