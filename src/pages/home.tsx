@@ -59,6 +59,19 @@ const Home = () => {
             <img src="assets/wordle-demo.gif" alt="Wordle Gif" width="95%" />
           }
         />
+        <Card
+          ProjectTitle="Tanstack React Table"
+          siteLink=""
+          gitLink=""
+          description="Basic table with Mockaroo Data"
+          project={
+            <img
+              src="assets/react_table.png"
+              alt="React Table Img"
+              width="95%"
+            />
+          }
+        />
       </ProjectContainer>
     </Container>
   );

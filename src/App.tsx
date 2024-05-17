@@ -10,6 +10,8 @@ const Container = styled.div`
   display: flex;
   .App {
     margin-top: 70px;
+    width: 100dvw;
+    height: 100dvh;
   }
 `;
 
