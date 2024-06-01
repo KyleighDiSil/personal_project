@@ -10,11 +10,13 @@ import mData from "../MOCK_DATA.json";
 
 const Container = styled.div`
   display: flex;
-  width: fit-content;
+  width: 90%;
   height: 300px;
-  overflow-y: auto;
+  overflow: auto;
   margin: 0 auto;
-  border: 1px solid #ddd;
+  border: 2px solid black;
+  border-radius: 8px;
+
   table {
     height: 300px;
   }
@@ -28,7 +30,7 @@ const Container = styled.div`
   table,
   td,
   th {
-    text-align: left;
+    text-align: center;
   }
 
   table {
@@ -39,6 +41,30 @@ const Container = styled.div`
   th,
   td {
     padding: 15px;
+    border: 1px solid #ddd;
+  }
+
+  // Remove the borders on the edges of the table
+  // This border will be set by its wrapping container
+  tr {
+    :first-of-type {
+      border-left: unset;
+    }
+    :last-of-type {
+      border-right: unset;
+    }
+  }
+  thead {
+    th {
+      border-top: unset;
+    }
+  }
+  tbody {
+    tr:last-of-type {
+      td {
+        border-bottom: unset;
+      }
+    }
   }
 `;
 const BaseTable = () => {

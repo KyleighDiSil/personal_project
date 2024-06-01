@@ -4,14 +4,14 @@ import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
 import Home from "./pages/home";
 import About from "./pages/about";
 import Resources from "./pages/resources";
-import Wordle from "./pages/wordle";
+import ReactTable from "./pages/react-table";
 
 const Container = styled.div`
   display: flex;
   .App {
     margin-top: 70px;
-    width: 100dvw;
-    height: 100dvh;
+    width: 100%;
+    height: 100%;
   }
 `;
 

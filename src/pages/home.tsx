@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Card from "../components/card";
 
 const ProjectContainer = styled.div`
-  width: 100vw;
+  width: 100%;
   height: fit-content;
   display: flex;
   flex-flow: row wrap;
@@ -61,13 +61,28 @@ const Home = () => {
         />
         <Card
           ProjectTitle="Tanstack React Table"
-          siteLink=""
-          gitLink=""
+          // Maybe create route names
+          siteLink="https://kyleighdisil.github.io/personal_project/react_table"
+          gitLink="https://github.com/KyleighDiSil/personal_project/blob/main/src/components/base-table.tsx"
           description="Basic table with Mockaroo Data"
           project={
             <img
               src="assets/react_table.png"
               alt="React Table Img"
+              width="95%"
+            />
+          }
+        />
+        <Card
+          ProjectTitle="Working With NFL API"
+          // Maybe create route names
+          siteLink="https://kyleighdisil.github.io/personal_project/api_page"
+          gitLink="https://github.com/KyleighDiSil/personal_project/blob/main/src/pages/api-page.tsx"
+          description={`This is a live api found at Rapid API. There are only 1000 request allowed per month on the free subscription to this api.`}
+          project={
+            <img
+              src="assets/NFL_ScoreCards.png"
+              alt="NHL Page Image"
               width="95%"
             />
           }

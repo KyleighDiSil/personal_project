@@ -4,7 +4,7 @@ const { BASE_URL } = import.meta.env;
 
 const Container = styled.div`
   position: absolute;
-  width: 100vw;
+  width: 100%;
   height: fit-content;
   overflow: hidden;
   background-color: #a4bab7;
