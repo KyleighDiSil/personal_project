@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import BaseTable from "../components/base-table";
-import NFL_JSON from "../nfl.json";
+import { useQuery } from "@tanstack/react-query";
 
 const Container = styled.div`
   width: 100%;
   height: 100%;
+  // height of page minus header height
+  min-height: calc(100vh - 70px);
   background-image: url(https://t4.ftcdn.net/jpg/01/00/00/31/360_F_100003169_uMg5nB171ogYAB4eYfks8GxNsvZfEYqy.jpg);
   background-size: cover;
   display: flex;
@@ -139,64 +140,67 @@ const ScoreCard = styled.div`
     color: #fff;
   }
 `;
-// https://api-web.nhle.com/v1/player-spotlight
-// const getData = async () => {
-//   const apiUrl = "https://api.imgflip.com/get_memes";
 
-//   try {
-//     let response = await fetch(apiUrl);
-//     if (response.ok) {
-//       let jsonresponse = await response.json();
-
-//       return jsonresponse;
-//     }
-//   } catch (error) {
-//     console.log(error);
-//   }
-//   return;
-// };
-// const url =
-//   "https://tank01-nfl-live-in-game-real-time-statistics-nfl.p.rapidapi.com/getNFLScoresOnly?gameDate=20240107&topPerformers=true";
-// const options = {
-//   method: "GET",
-//   headers: {
-//     "X-RapidAPI-Key": "79a3103e96mshc13572448f404b4p1cfe3bjsn2ded067b07f0",
-//     "X-RapidAPI-Host":
-//       "tank01-nfl-live-in-game-real-time-statistics-nfl.p.rapidapi.com",
-//   },
-// };
-
-// try {
-//   const response = await fetch(url, options);
-//   const result = await response.text();
-//   console.log(result);
-// } catch (error) {
-//   console.error(error);
-// }
+const url =
+  "https://tank01-nfl-live-in-game-real-time-statistics-nfl.p.rapidapi.com/getNFLScoresOnly?gameDate=20240107&topPerformers=true";
+const options = {
+  method: "GET",
+  headers: {
+    "X-RapidAPI-Key": "79a3103e96mshc13572448f404b4p1cfe3bjsn2ded067b07f0",
+    "X-RapidAPI-Host":
+      "tank01-nfl-live-in-game-real-time-statistics-nfl.p.rapidapi.com",
+  },
+};
 
 const ApiPage = () => {
-  const data: { [key: string]: any } = NFL_JSON.body;
+  const { isError, isLoading, data } = useQuery({
+    queryKey: ["getNFLGameStats"],
+    queryFn: async () => {
+      const results = await fetch(url, options);
+      return results.json();
+    },
+    staleTime: Infinity,
+    gcTime: Infinity,
+  });
 
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  const nflData: { [key: string]: any } = data?.body ?? {};
   return (
     <Container>
-      {Object.keys(data).map((i) => {
-        return (
-          <ScoreCard className="s_bode" key={i}>
-            <div className="left_section">
-              <h2>Home Team: {data[i].home}</h2>
-            </div>
-            <div className="mid_section">
-              <h1>
-                {data[i].homePts} - {data[i].awayPts}
-              </h1>
-              <p>{data[i].lineScore.period}</p>
-            </div>
-            <div className="right_section">
-              <h2>Away Team: {data[i].away}</h2>
-            </div>
-          </ScoreCard>
-        );
-      })}
+      {nflData &&
+        !isError &&
+        Object.keys(nflData).map((i) => {
+          return (
+            <ScoreCard className="s_bode" key={i}>
+              <div className="left_section">
+                <h2>Home Team: {nflData[i].home}</h2>
+              </div>
+              <div className="mid_section">
+                <h1>
+                  {nflData[i].homePts} - {nflData[i].awayPts}
+                </h1>
+                <p>{nflData[i].lineScore.period}</p>
+              </div>
+              <div className="right_section">
+                <h2>Away Team: {nflData[i].away}</h2>
+              </div>
+            </ScoreCard>
+          );
+        })}
+      {isError && (
+        <ScoreCard className="s_bode">
+          <div className="mid_section">
+            <h1>NFL API Error</h1>
+            <p>
+              Please check back another time. If this is still not working note
+              this API is free only for 1000 queries a month.
+            </p>
+          </div>
+        </ScoreCard>
+      )}
     </Container>
   );
 };

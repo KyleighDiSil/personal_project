@@ -7,10 +7,13 @@ import Home from "./pages/home";
 import Resources from "./pages/resources";
 import About from "./pages/about";
 import ReactTable from "./pages/react-table";
-import ApiPage from "./pages/api-page";
+import ApiPage from "./pages/nfl";
 import { StyleSheetManager } from "styled-components";
 const { BASE_URL } = import.meta.env;
 import isPropValid from "@emotion/is-prop-valid";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
   {
@@ -34,7 +37,7 @@ const router = createBrowserRouter([
         element: <ReactTable />,
       },
       {
-        path: `${BASE_URL}/api_page`,
+        path: `${BASE_URL}/nfl`,
         element: <ApiPage />,
       },
     ],
@@ -54,7 +57,9 @@ function shouldForwardProp(propName: string, target: any) {
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <StyleSheetManager shouldForwardProp={shouldForwardProp}>
-      <RouterProvider router={router} />
+      <QueryClientProvider client={queryClient}>
+        <RouterProvider router={router} />
+      </QueryClientProvider>
     </StyleSheetManager>
   </React.StrictMode>
 );

@@ -76,7 +76,7 @@ const Home = () => {
         <Card
           ProjectTitle="Working With NFL API"
           // Maybe create route names
-          siteLink="https://kyleighdisil.github.io/personal_project/api_page"
+          siteLink="https://kyleighdisil.github.io/personal_project/nfl"
           gitLink="https://github.com/KyleighDiSil/personal_project/blob/main/src/pages/api-page.tsx"
           description={`This is a live api found at Rapid API. There are only 1000 request allowed per month on the free subscription to this api.`}
           project={
