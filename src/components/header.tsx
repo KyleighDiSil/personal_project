@@ -75,9 +75,12 @@ const Header = () => {
         <li>
           <a href={BASE_URL}>Home</a>
         </li>
+        {/*
+        Removing Resources Until I have time to make it actually useful
         <li>
           <a href={BASE_URL + "resources"}>Resources</a>
-        </li>
+        </li> 
+        */}
         <li>
           <a href={BASE_URL + "about"}>About</a>
         </li>

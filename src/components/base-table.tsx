@@ -1,10 +1,10 @@
 import React, { useMemo } from "react";
-import { styled, css } from "styled-components";
+import { styled } from "styled-components";
 import {
   useReactTable,
   getCoreRowModel,
   flexRender,
-  ColumnDef,
+  createColumnHelper,
 } from "@tanstack/react-table";
 import mData from "../MOCK_DATA.json";
 
@@ -68,16 +68,13 @@ const Container = styled.div`
   }
 `;
 const BaseTable = () => {
-  // {
-  //     "id": 1,
-  //     "first_name": "Jayme",
-  //     "last_name": "Christescu",
-  //     "email": "jchristescu0@gravatar.com",
-  //     "gender": "Male",
-  //     "dob": "2023-10-22T05:58:55Z"
-  //   },
-
   const data = useMemo(() => mData, []);
+  // Can be upgraded:
+  // const createColumn = createColumnHelper<DataType>();
+  // const columns = createColumn.accessor((row) => row.id, {
+  //   header: "ID",
+  //   cell: (props) => props.getValue(),
+  // });
   const columns = [
     {
       header: "ID",

@@ -1,5 +1,4 @@
 import React from "react";
-import Form from "../components/form";
 import styled, { css } from "styled-components";
 import { Link } from "react-router-dom";
 
@@ -110,7 +109,6 @@ const Container = styled.div<{ isFlipped: boolean }>`
     color: #fff;
     font-size: 32px;
     font-weight: 900;
-    text-transform: uppercase;
     text-align: center;
   }
 
@@ -145,7 +143,7 @@ const Card = (args: {
   ProjectTitle: string;
   project: React.ReactNode;
   description: string;
-  gitLink: string;
+  codeLink: string;
   siteLink?: string;
 }) => {
   const [isFlipped, setIsFlipped] = React.useState(false);
@@ -170,8 +168,8 @@ const Card = (args: {
               <h3>{args.ProjectTitle}</h3>
               <p>{args.description}</p>
               <LinkContainer>
-                <Link to={args.gitLink} target="_blank">
-                  Github
+                <Link to={args.codeLink} target="_blank">
+                  Code
                 </Link>
                 {args.siteLink && (
                   <Link to={args.siteLink} target="_blank">

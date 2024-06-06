@@ -4,6 +4,7 @@ Breakpoints
 
 ## Creating a Vite Application Steps
 
+- [Create Vite App YouTube](https://www.youtube.com/watch?v=uEEj2c3_ydg)
 - run `npm create vite@latest`
 - √ Select a framework: » React
 - √ Select a variant: » TypeScript
@@ -28,10 +29,3 @@ Breakpoints
 - If you are using visual studio some extensions to consider:
   - Prettier - Code formatter
   - vscode-styled-components (If you installed styled-components)
-
-### breakpoints I want to use
-
-- xs: min-width: 640px
-- s: min-width: 768px;
-- md: min-width: 1024px;
-- lg: min-width: 1200px;

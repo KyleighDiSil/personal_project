@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import Card from "../components/card";
 
 const ProjectContainer = styled.div`
@@ -40,7 +40,7 @@ const Home = () => {
         <Card
           ProjectTitle="NBI Systems"
           description="A startup from Clarkson University reached out for some help building their website my senior year of college."
-          gitLink="https://github.com/KyleighDiSil/NBI-Website"
+          codeLink="https://github.com/KyleighDiSil/NBI-Website"
           siteLink="https://kyleighdisil.github.io/NBI-Website/"
           project={
             <div className="thumbnail">
@@ -53,7 +53,7 @@ const Home = () => {
         />
         <Card
           ProjectTitle="Wordle"
-          gitLink="https://github.com/KyleighDiSil/project-wordle"
+          codeLink="https://github.com/KyleighDiSil/project-wordle"
           description="A different version of Wordle that is more user friendly to those with screen readers. Acknolegement to Joy of React Course."
           project={
             <img src="assets/wordle-demo.gif" alt="Wordle Gif" width="95%" />
@@ -63,7 +63,7 @@ const Home = () => {
           ProjectTitle="Tanstack React Table"
           // Maybe create route names
           siteLink="https://kyleighdisil.github.io/personal_project/react_table"
-          gitLink="https://github.com/KyleighDiSil/personal_project/blob/main/src/components/base-table.tsx"
+          codeLink="https://github.com/KyleighDiSil/personal_project/blob/main/src/components/base-table.tsx"
           description="Basic table with Mockaroo Data"
           project={
             <img
@@ -77,7 +77,7 @@ const Home = () => {
           ProjectTitle="Working With NFL API"
           // Maybe create route names
           siteLink="https://kyleighdisil.github.io/personal_project/nfl"
-          gitLink="https://github.com/KyleighDiSil/personal_project/blob/main/src/pages/api-page.tsx"
+          codeLink="https://github.com/KyleighDiSil/personal_project/blob/main/src/pages/api-page.tsx"
           description={`This is a live api found at Rapid API. There are only 1000 request allowed per month on the free subscription to this api.`}
           project={
             <img
@@ -85,6 +85,14 @@ const Home = () => {
               alt="NHL Page Image"
               width="95%"
             />
+          }
+        />
+        <Card
+          ProjectTitle="Simple Notes App"
+          codeLink="https://codesandbox.io/p/sandbox/notes-app-ngphgy"
+          description="This is a simple notes app made in code sandbox."
+          project={
+            <img src="assets/notes.png" alt="Notes App Image" width="95%" />
           }
         />
       </ProjectContainer>
